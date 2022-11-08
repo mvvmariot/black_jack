@@ -21,17 +21,17 @@ while True:
 
         if aan_beurt == "speler1":
 
-            print("Voeg 1 , 2 of 3 toe de speler die boven 21 gaat verliest")
+            print("Voeg punten bij, de speler die boven 21 gaat verliest")
 
             keuze_speler = ""
-            while keuze_speler not in ["1", "2", "3"]:
+            while keuze_speler not in ["1", "2", "3","4","5","6","7","8","9","10","11"]:
                 keuze_speler = input("Hoeveel punten wil je erbij doen ")
 
             keuze_speler = int(keuze_speler)
             aantal_punten = aantal_punten + keuze_speler
             print()
 
-            if aantal_punten >= 21:
+            if aantal_punten > 21:
                 print("Het aantal punten is  " + str(aantal_punten) + ".")
                 print()
                 print("Je bent verloren.")
@@ -40,7 +40,7 @@ while True:
 
         else:
 
-            keuze_computer = random.randint(1, 3)
+            keuze_computer = random.randint(1, 11)
             aantal_punten = aantal_punten + keuze_computer
             print("De computer zijn beurt hij kiest " +
                   str(keuze_computer) + ".")
